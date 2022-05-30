@@ -9,9 +9,11 @@ Follow these steps each time you start working:
 1. Make sure you are synced with the master/main branch 
 
 ```
-git checkout master
-git pull upstream/master
-git push origin master
+git checkout main
+git pull origin main
+git checkout <feature branch>
+git merge main
+git push
 ```
 
 2. Create a new branch in your project fork for the changes you want to make
