@@ -10,8 +10,7 @@ Follow these steps each time you start working:
 
 ```
 git checkout master
-git fetch upstream
-git merge upstream/master
+git pull upstream/master
 git push origin master
 ```
 
