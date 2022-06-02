@@ -9,4 +9,8 @@ server.use(express.json());
 // Use routers here
 server.use('/api/favoriteRecipes', FavoriteRecipesRouter)
 
+server.get('/', (req, res) => {
+  res.send({ message: 'up' });
+});
+
 module.exports = server;
