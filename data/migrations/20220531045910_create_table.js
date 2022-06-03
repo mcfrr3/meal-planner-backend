@@ -18,11 +18,10 @@ exports.up = function(knex) {
         .notNullable()
         .references('user_id')
         .inTable('users');
-      tbl.integer('recipe_id')
+      tbl.integer('mealDB_id')
         .unsigned()
-        .notNullable()
-        .references('recipe_id')
-        .inTable('recipe');
+        .notNullable();
+      tbl.primary(['user_id', 'mealDB_id']);
   })
 };
 
