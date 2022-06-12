@@ -1,5 +1,12 @@
 # meal-planner-backend
 
+A backend API using nodeJS and express to allow users on the [meal-planner](https://github.com/mcfrr3/meal-planner) frontend app to save favorite recipes. 
+Uses the following:
+- NodeJS
+- Express
+- knex 
+- SQLite
+
 ## Git 
 
 https://stackoverflow.com/questions/20956154/whats-the-workflow-to-contribute-to-an-open-source-project-using-git-pull-reque
