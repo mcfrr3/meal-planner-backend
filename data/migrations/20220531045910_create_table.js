@@ -12,30 +12,16 @@ exports.up = function(knex) {
       tbl.varchar('password', 128)
         .notNullable();
   })
-  .createTable('recipe', tbl => {
-      tbl.increments('recipe_id')
-      tbl.integer('mealsDB-id')
-        .notNullable()
-        .unique();
-      tbl.varchar('recipe_name', 128) 
-        .notNullable()
-        .unique();
-  })
   .createTable('favorite_recipe', tbl => {
       tbl.integer('user_id')
         .unsigned()
         .notNullable()
         .references('user_id')
-        .inTable('users')
-        .onUpdate('CASCADE')
-        .onDelete('CASCADE');
-      tbl.integer('recipe_id')
+        .inTable('users');
+      tbl.integer('mealDB_id')
         .unsigned()
-        .notNullable()
-        .references('recipe_id')
-        .inTable('recipe')
-        .onUpdate('CASCADE')
-        .onDelete('CASCADE')
+        .notNullable();
+      tbl.primary(['user_id', 'mealDB_id']);
   })
 };
 
